@@ -1,7 +1,6 @@
 package com.nelson.recyclerviewadapter;
 
 import android.content.Context;
-import android.support.annotation.Keep;
 import android.support.annotation.LayoutRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
  * Created by Niu on 2017/6/7.
  *
  */
-@Keep
+
 public abstract class RecyclerViewAdapter<T> extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
     private ArrayList<T> mDatas = new ArrayList<>();
@@ -56,7 +55,7 @@ public abstract class RecyclerViewAdapter<T> extends RecyclerView.Adapter<Recycl
 
         private View mItemView;
 
-        ViewHolder(View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
             mItemView = itemView;
         }
